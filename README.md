@@ -1,7 +1,7 @@
 synman_aosp_tilapia
 ===================
 
-Grouper for Tilapia AOSP Based Android OS
+Grouper with Tilapia (GwT) AOSP Based Android OS
 
 RC4 - JWR66V 4.3_r1
 
