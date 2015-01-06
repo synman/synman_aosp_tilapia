@@ -16,16 +16,15 @@
 
 # rild
 PRODUCT_PACKAGES := \
-    Email \
+	CellBroadcastReceiver \
     LegacyCamera \
-    NotePad \
-    CellBroadcastReceiver
+    Launcher3
 
 PRODUCT_COPY_FILES := \
     device/asus/tilapia/fstab.grouper:root/fstab.grouper \
+    device/asus/tilapia/init.recovery.tilapia.rc:root/init.recovery.grouper.rc \
     device/asus/tilapia/init.tilapia.rc:root/init.grouper.rc \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
-
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/asus/tilapia/overlay

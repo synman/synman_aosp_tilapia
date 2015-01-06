@@ -15,7 +15,9 @@
 # Elan blob(s) necessary for Grouper hardware
 PRODUCT_PACKAGES := \
         Sunbeam \
-        NovaLauncher
+        bootanimation \
+        rild
+
         
 #    Superuser
 #    NovaLauncher

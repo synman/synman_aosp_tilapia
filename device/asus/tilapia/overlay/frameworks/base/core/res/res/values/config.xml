@@ -47,6 +47,7 @@
         <item>"mobile_cbs,12,0,2,60000,true"</item>
         <item>"wifi_p2p,13,1,0,-1,true"</item>
         <item>"bluetooth,7,7,2,-1,true"</item>
+        <item>"ethernet,9,9,1,-1,true"</item>
     </string-array>
     
     <!-- This string array should be overridden by the device to present a list of radio
@@ -58,6 +59,7 @@
         <item>"1,1"</item>
         <item>"0,1"</item>
         <item>"7,1"</item>
+        <item>"9,1"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -248,6 +250,8 @@
     
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">8</integer>
+    <!-- Whether UI for multi user should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
 
     <!-- reference volume index for music stream to limit headphone volume and display warning -->
     <integer name="config_safe_media_volume_index">6</integer>
@@ -255,9 +259,12 @@
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The standard AOSP fused location provider -->
         <item>com.android.location.fused</item>
-        <!-- The Google Network Location Services location provider -->
+        <!-- Legacy Google location provider -->
         <item>com.google.android.location</item>
-        
+        <!-- Current Google location provider -->
+        <item>com.google.android.gms</item>
     </string-array>
     
+	<bool name="config_animateScreenLights">false</bool>
+
 </resources>

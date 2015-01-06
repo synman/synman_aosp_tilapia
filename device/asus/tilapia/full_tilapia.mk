@@ -19,26 +19,23 @@
 # product configuration (apps).
 #
 
-# Get the long list of APNs and add GwT specifics
-PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml \
-	device/asus/tilapia/prebuilt/xbin/mountrw.sh:system/xbin/mountrw.sh \
-	device/asus/tilapia/prebuilt/xbin/busybox:system/xbin/busybox \
-	device/asus/tilapia/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
-
-#	device/asus/tilapia/prebuilt/xbin/su:system/xbin/su \
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/asus/tilapia/device.mk)
+# This is where we'd set a backup provider if we had one
+#$(call inherit-product, device/sample/products/backup_overlay.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# bring in custom GwT prebuilts (Superuser)
+# bring in custom GwT prebuilts
 $(call inherit-product-if-exists, vendor/synman/tilapia/device-partial.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := full_tilapia
+PRODUCT_NAME := nakasig
 PRODUCT_DEVICE := tilapia
 PRODUCT_BRAND := Google
 PRODUCT_MANUFACTURER := Asus
 PRODUCT_MODEL := Nexus 7 3G
+
+PRODUCT_PACKAGES -= \
+    Launcher2 \
+    Home 
+    
