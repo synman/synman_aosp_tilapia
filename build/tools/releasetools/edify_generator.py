@@ -112,7 +112,7 @@ class EdifyGenerator(object):
 	self.script.append('ui_print("         /   \  __\ \/ \/ / |    |");');
 	self.script.append('ui_print("         \    \_\  \     /  |    |");');  
 	self.script.append('ui_print("          \______  /\/\_/   |____|");');   
-	self.script.append('ui_print("                 \/                       LXR22G");');                 
+	self.script.append('ui_print("                 \/                       LRX22G");');                 
 
   def AssertDevice(self, device):
 	self.script.append('ui_print(" ");');
